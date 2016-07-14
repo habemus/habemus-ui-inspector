@@ -4,6 +4,7 @@ const proc = require('child_process')
 // third-party dependencies
 const gulp = require('gulp');
 const electron = require('electron-prebuilt');
+const gulpSize = require('gulp-size');
 
 // browserify
 const browserify = require('browserify');
@@ -28,7 +29,8 @@ gulp.task('javascript', function () {
   return b.bundle()
     .pipe(source('hab-ui-inspector.js'))
     .pipe(buffer())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe(gulpSize());
 });
 
 gulp.task('develop', ['javascript'], function () {
