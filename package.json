@@ -1,6 +1,6 @@
 {
-  "name": "hab-ui-inspector",
-  "version": "0.0.0",
+  "name": "habemus-ui-inspector",
+  "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
